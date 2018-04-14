@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta name="viewport"
+          content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>配灯网</title>
+    <link rel="stylesheet" href="CSS/swiper-3.4.2.min.css">
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top_navi {
+            position: fixed;
+            height: 3rem;
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            display: flex;
+            display: -webkit-flex;
+            background-color: #fff;
+            z-index: 10;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #e4eaea;
+        }
+
+        .tl {
+            height: 3rem;
+            width: 3rem;
+        }
+
+        .tm {
+            height: 3rem;
+            width: 5rem;
+            flex-grow: 1;
+            -webkit-flex-grow: 1;
+            text-align: center;
+        }
+
+        .tm_swiper {
+            height: 3rem;
+            margin:auto;
+        }
+
+        .tr {
+            height: 3rem;
+            width: 3rem;
+        }
+
+        .tl img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0.75rem;
+        }
+
+        .tr img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0.75rem;
+        }
+
+        .gl {
+            height: 100%;
+            width: 100%;
+        }
+
+        .gl-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+        }
+
+        .top-ph {
+            width: 100%;
+            height: 3rem;
+            border-bottom: 1px;
+        }
+
+        .goods {
+            padding: 2%;
+            width: 42%;
+            background-color: #fff;
+            float: left;
+            margin: 0.5rem 0 0 2%;
+        }
+
+        .gp {
+            width: 100%;
+        }
+
+        .title {
+            height: 2.4rem;
+            line-height: 1.2rem;
+            overflow: hidden;
+            font-size: 0.8rem;
+            color: #3d3d3d;
+        }
+
+        .model {
+            height: 1.2rem;
+            line-height: 1.2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #a1a1a1;
+            font-size: 0.6rem;
+        }
+
+        .price {
+            height: 2.5rem;
+            line-height: 2.5rem;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            color: #af8d50;
+            display: flex;
+            display: -webkit-flex;
+        }
+
+        .rmbl {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 0.75rem;
+            background-color: #af8d50;
+            color: #fff;
+            text-align: center;
+            line-height: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .rmbn {
+            flex-grow: 1;
+            -webkit-flex-grow: 1;
+        }
+
+        .ac {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        .ac img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0.5rem;
+        }
+
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="JavaScript/swiper-3.4.2.min.js"></script>
+
+<div class="top_navi">
+    <div class="tl">
+        <img src="images/tn_search.png" alt="">
+    </div>
+    <div class="tm">
+        <div class="tm_swiper">
+
+        </div>
+    </div>
+    <div class="tr">
+        <img src="images/tn_class.png" alt="">
+    </div>
+</div>
+
+<div class="gl">
+    <div class="gl-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="top-ph"></div>
+                <div class="content">
+                    <div class="goods">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="top-ph"></div>
+                <div class="content">
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="top-ph"></div>
+                <div class="content">
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                    <div class="goods"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var mySwiper = new Swiper ('.gl-container', {
+        
+    })
+
+</script>
+
+</body>
+</html>
