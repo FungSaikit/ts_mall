@@ -37,15 +37,25 @@
 
         .tm {
             height: 3rem;
+            line-height: 2.9rem;
             width: 5rem;
             flex-grow: 1;
             -webkit-flex-grow: 1;
             text-align: center;
+            white-space: nowrap;
+            overflow: scroll;
         }
 
-        .tm_swiper {
-            height: 3rem;
-            margin:auto;
+        .tm_tab {
+            display: inline-block;
+            width: 5rem;
+            height: 2.9rem;
+            color: #a1a1a1;
+        }
+
+        .tm_tab_active {
+            color: #000;
+            border-bottom: 0.1rem solid #c474d5;
         }
 
         .tr {
@@ -80,6 +90,7 @@
             width: 100%;
             height: 100%;
             overflow: scroll;
+            -webkit-overflow-scrolling: touch;
         }
 
         .top-ph {
@@ -156,22 +167,70 @@
             margin: 0.5rem;
         }
 
+        .favourite {
+            height: 1.5rem;
+            line-height: 1.5rem;
+            display: flex;
+            display: -webkit-flex;
+            font-size: 0.8rem;
+            color: #a1a1a1;
+            vertical-align: middle;
+        }
+
+        .favourite img {
+            margin: 0.25rem;
+            width: 0.9rem;
+            height: 0.9rem;
+        }
+
+        .fav {
+            flex-grow: 1;
+            -webkit-flex-grow: 1;
+        }
+
+        .search-window {
+            position: fixed;
+            background: #ffffff;
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+        }
+
+        .search-bar {
+            display: flex;
+            display: -webkit-flex;
+            width: 100%;
+            height: 2.5rem;
+            border-bottom: 1px solid lightgray;
+        }
+
     </style>
 </head>
 <body>
 <script type="text/javascript" src="JavaScript/swiper-3.4.2.min.js"></script>
+<script type="text/javascript" src="JavaScript/smoothscroll.js"></script>
 
 <div class="top_navi">
     <div class="tl">
-        <img src="images/tn_search.png" alt="">
+        <img src="images/tn_search.png" alt="" onclick="showSearchWindow()">
     </div>
-    <div class="tm">
-        <div class="tm_swiper">
-
-        </div>
+    <div class="tm" id="tm">
+        <div class="tm_tab tm_tab_active" index="0" onclick="changeTabs(this)">首页风格</div>
+        <div class="tm_tab" index="1" onclick="changeTabs(this)">轻奢风格</div>
+        <div class="tm_tab" index="2" onclick="changeTabs(this)">现代中式</div>
+        <div class="tm_tab" index="3" onclick="changeTabs(this)">北欧现代</div>
+        <div class="tm_tab" index="4" onclick="changeTabs(this)">新欧美</div>
+        <div class="tm_tab" index="5" onclick="changeTabs(this)">新美式</div>
+        <div class="tm_tab" index="6" onclick="changeTabs(this)">风扇灯</div>
     </div>
     <div class="tr">
         <img src="images/tn_class.png" alt="">
+    </div>
+</div>
+
+<div class="search-window">
+    <div class="search-bar">
+
     </div>
 </div>
 
@@ -181,9 +240,9 @@
             <div class="swiper-slide">
                 <div class="top-ph"></div>
                 <div class="content">
-                    <div class="goods">
+                    <div class="goods" onclick="alert('good!');">
                         <img src="images/light.jpg" class="gp">
-                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="title">0雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
                         <div class="model">型号：E-NPX9014</div>
                         <div class="price">
                             <span class="rmbl">￥</span>
@@ -192,53 +251,12 @@
                                 <img src="images/cart.png" alt="">
                             </div>
                         </div>
-                    </div>
-                    <div class="goods">
-                        <img src="images/light.jpg" class="gp">
-                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
-                        <div class="model">型号：E-NPX9014</div>
-                        <div class="price">
-                            <span class="rmbl">￥</span>
-                            <span class="rmbn">1499</span>
-                            <div class="ac">
-                                <img src="images/cart.png" alt="">
+                        <div class="favourite">
+                            <div>
+                                <img src="images/favourite.png" alt="">
                             </div>
-                        </div>
-                    </div>
-                    <div class="goods">
-                        <img src="images/light.jpg" class="gp">
-                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
-                        <div class="model">型号：E-NPX9014</div>
-                        <div class="price">
-                            <span class="rmbl">￥</span>
-                            <span class="rmbn">1499</span>
-                            <div class="ac">
-                                <img src="images/cart.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="goods">
-                        <img src="images/light.jpg" class="gp">
-                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
-                        <div class="model">型号：E-NPX9014</div>
-                        <div class="price">
-                            <span class="rmbl">￥</span>
-                            <span class="rmbn">1499</span>
-                            <div class="ac">
-                                <img src="images/cart.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="goods">
-                        <img src="images/light.jpg" class="gp">
-                        <div class="title">雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
-                        <div class="model">型号：E-NPX9014</div>
-                        <div class="price">
-                            <span class="rmbl">￥</span>
-                            <span class="rmbn">1499</span>
-                            <div class="ac">
-                                <img src="images/cart.png" alt="">
-                            </div>
+                            <div class="fav">收藏</div>
+                            <div>后现代</div>
                         </div>
                     </div>
                 </div>
@@ -246,27 +264,145 @@
             <div class="swiper-slide">
                 <div class="top-ph"></div>
                 <div class="content">
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
+                    <div class="goods" onclick="alert('good!');">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">1雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                        <div class="favourite">
+                            <div>
+                                <img src="images/favourite.png" alt="">
+                            </div>
+                            <div class="fav">收藏</div>
+                            <div>后现代</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="top-ph"></div>
                 <div class="content">
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
-                    <div class="goods"></div>
+                    <div class="goods" onclick="alert('good!');">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">2雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                        <div class="favourite">
+                            <div>
+                                <img src="images/favourite.png" alt="">
+                            </div>
+                            <div class="fav">收藏</div>
+                            <div>后现代</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="top-ph"></div>
+                <div class="content">
+                    <div class="goods" onclick="alert('good!');">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">3雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                        <div class="favourite">
+                            <div>
+                                <img src="images/favourite.png" alt="">
+                            </div>
+                            <div class="fav">收藏</div>
+                            <div>后现代</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="top-ph"></div>
+                <div class="content">
+                    <div class="goods" onclick="alert('good!');">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">4雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                        <div class="favourite">
+                            <div>
+                                <img src="images/favourite.png" alt="">
+                            </div>
+                            <div class="fav">收藏</div>
+                            <div>后现代</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="top-ph"></div>
+                <div class="content">
+                    <div class="goods" onclick="alert('good!');">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">5雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                        <div class="favourite">
+                            <div>
+                                <img src="images/favourite.png" alt="">
+                            </div>
+                            <div class="fav">收藏</div>
+                            <div>后现代</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="top-ph"></div>
+                <div class="content">
+                    <div class="goods" onclick="alert('good!');">
+                        <img src="images/light.jpg" class="gp">
+                        <div class="title">6雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                        <div class="model">型号：E-NPX9014</div>
+                        <div class="price">
+                            <span class="rmbl">￥</span>
+                            <span class="rmbn">1499</span>
+                            <div class="ac">
+                                <img src="images/cart.png" alt="">
+                            </div>
+                        </div>
+                        <div class="favourite">
+                            <div>
+                                <img src="images/favourite.png" alt="">
+                            </div>
+                            <div class="fav">收藏</div>
+                            <div>后现代</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -274,9 +410,32 @@
 </div>
 <script type="text/javascript">
 
-    var mySwiper = new Swiper ('.gl-container', {
-        
-    })
+    var topMiddle = document.getElementsByClassName('tm')[0];//顶部tab的容器
+    var tabs = document.getElementsByClassName('tm_tab');//所有顶部tab
+    var searchWindow = document.getElementsByClassName('search-window')[0];//搜索模态框
+
+    var contentSwiper = new Swiper ('.gl-container', {
+        onSlideChangeEnd: function(swiper){
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].className = 'tm_tab';
+            }
+            tabs[swiper.activeIndex].className += ' tm_tab_active';
+            // topMiddle.scrollLeft = 80 * swiper.activeIndex;
+            topMiddle.scrollTo({ top: 0, left: 85 * swiper.activeIndex, behavior: 'smooth' });
+        }
+    });
+
+    function changeTabs(object) {
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].className = 'tm_tab';
+        }
+        object.className += ' tm_tab_active';
+        contentSwiper.slideTo(object.getAttribute('index'), 500, false);
+    }
+
+    function showSearchWindow() {
+        searchWindow.hidden = !searchWindow.hidden;
+    }
 
 </script>
 
