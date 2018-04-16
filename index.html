@@ -93,15 +93,9 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .top-ph {
-            width: 100%;
-            height: 3rem;
-            border-bottom: 1px;
-        }
-
         .goods {
             padding: 2%;
-            width: 42%;
+            width: 43%;
             background-color: #fff;
             float: left;
             margin: 0.5rem 0 0 2%;
@@ -200,9 +194,214 @@
             display: flex;
             display: -webkit-flex;
             width: 100%;
-            height: 2.5rem;
+            height: 3rem;
             border-bottom: 1px solid lightgray;
         }
+
+        .back-bt {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .back-bt img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0.75rem;
+        }
+
+        .keyword {
+            flex-grow: 1;
+            -webkit-flex-grow: 1;
+            line-height: 2.5rem;
+            text-align: center;
+        }
+
+        .keyword input {
+            width: 95%;
+            height: 2.5rem;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid lightgray;
+            border-radius: 0;
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .search-bt {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .search-bt img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0.75rem;
+        }
+
+        .class-window {
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+            position: fixed;
+            background-color: #fff;
+        }
+
+        .class-tb {
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            display: -webkit-flex;
+        }
+
+        .cw-l {
+            flex-grow: 1;
+            -webkit-flex-grow: 1;
+            line-height: 3rem;
+        }
+
+        .cw-r {
+            width: 3rem;
+            height: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .i-class {
+            float: left;
+            border: 1px solid lightgray;
+            border-radius: 0.2rem;
+            width: 30%;
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            overflow: hidden;
+            margin: 0.5rem 0 0 2%;
+        }
+
+        .load-warn {
+            margin: 2%;
+            width: 96%;
+            height: 2rem;
+            line-height: 2rem;
+            background-color: #fff;
+            text-align: center;
+            color: dimgray;
+            font-size: 0.8rem;
+        }
+
+        .no-collapse:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .placeholder {
+            width: 100%;
+            height: 3rem;
+            border-top: 1px;
+        }
+
+        /*
+        下面是footer的Style,方便分离到footer.jsp
+        */
+
+        .footer {
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            display: -webkit-flex;
+            border-top: 1px solid lightgray;
+            background-color: #fff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .ft {
+            width: 20%;
+            flex-grow: 1;
+            -webkit-flex-grow: 1;
+            font-size: 0.8rem;
+            color: dimgray;
+        }
+
+        .ft img {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: 0.2rem;
+        }
+
+        #fm, #fma {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 0.25rem;
+        }
+
+        .fa {
+            color: #c474d5;
+        }
+
+        #f-menu {
+            z-index: 10;
+            width: 16rem;
+            height: 8rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 3rem;
+            border-top-left-radius: 8rem;
+            border-top-right-radius: 8rem;
+            border: 1px solid lightgray;
+        }
+
+        .f-m-r {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        #f-menu img {
+            width: 2.5rem;
+            height: 2.5rem;
+            position: absolute;
+        }
+
+        .i0 {
+            left: 1rem;
+            bottom: 0.5rem;
+        }
+
+        .i1 {
+            left: 3.1rem;
+            bottom: 3.8rem
+        }
+
+        .i2 {
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0.5rem;
+        }
+
+        .i3 {
+            right: 3.1rem;
+            bottom: 3.8rem;
+        }
+
+        .i4 {
+            right: 1rem;
+            bottom: 0.5rem;
+        }
+
+        /*
+        上面是footer的CSS，方便分离到footer.jsp
+        */
 
     </style>
 </head>
@@ -211,26 +410,50 @@
 <script type="text/javascript" src="JavaScript/smoothscroll.js"></script>
 
 <div class="top_navi">
-    <div class="tl">
-        <img src="images/tn_search.png" alt="" onclick="showSearchWindow()">
+    <div class="tl" onclick="showSearchWindow()">
+        <img src="images/tn_search.png" alt="">
     </div>
     <div class="tm" id="tm">
-        <div class="tm_tab tm_tab_active" index="0" onclick="changeTabs(this)">首页风格</div>
-        <div class="tm_tab" index="1" onclick="changeTabs(this)">轻奢风格</div>
-        <div class="tm_tab" index="2" onclick="changeTabs(this)">现代中式</div>
-        <div class="tm_tab" index="3" onclick="changeTabs(this)">北欧现代</div>
-        <div class="tm_tab" index="4" onclick="changeTabs(this)">新欧美</div>
-        <div class="tm_tab" index="5" onclick="changeTabs(this)">新美式</div>
-        <div class="tm_tab" index="6" onclick="changeTabs(this)">风扇灯</div>
+        <div class="tm_tab tm_tab_active" tabindex="0" onclick="changeTabs(this)">首页推荐</div>
+        <div class="tm_tab" tabindex="1" onclick="changeTabs(this)">轻奢风格</div>
+        <div class="tm_tab" tabindex="2" onclick="changeTabs(this)">现代中式</div>
+        <div class="tm_tab" tabindex="3" onclick="changeTabs(this)">北欧现代</div>
+        <div class="tm_tab" tabindex="4" onclick="changeTabs(this)">新欧美</div>
+        <div class="tm_tab" tabindex="5" onclick="changeTabs(this)">新美式</div>
+        <div class="tm_tab" tabindex="6" onclick="changeTabs(this)">风扇灯</div>
     </div>
-    <div class="tr">
+    <div class="tr" onclick="showClassWindow()">
         <img src="images/tn_class.png" alt="">
     </div>
 </div>
 
-<div class="search-window">
+<div class="search-window" hidden>
     <div class="search-bar">
+        <div class="back-bt" onclick="showSearchWindow()">
+            <img src="images/back.png" alt="取消">
+        </div>
+        <div class="keyword">
+            <input id="keyword" type="text" placeholder="请输入要搜索的内容">
+        </div>
+        <div class="search-bt">
+            <img src="images/tn_search.png" alt="搜索" onclick="searchByKeyword()">
+        </div>
+    </div>
+</div>
 
+<div class="class-window" hidden>
+    <div class="class-tb">
+        <div class="cw-l">&nbsp&nbsp选择风格</div>
+        <div class="cw-r" onclick="showClassWindow()">Ｘ</div>
+    </div>
+    <div class="i-classes">
+        <div class="i-class" tabindex="0" onclick="iChangeTabs(this)">首页推荐</div>
+        <div class="i-class" tabindex="1" onclick="iChangeTabs(this)">轻奢风格</div>
+        <div class="i-class" tabindex="2" onclick="iChangeTabs(this)">现在中式</div>
+        <div class="i-class" tabindex="3" onclick="iChangeTabs(this)">北欧现代</div>
+        <div class="i-class" tabindex="4" onclick="iChangeTabs(this)">新欧美</div>
+        <div class="i-class" tabindex="5" onclick="iChangeTabs(this)">新美式</div>
+        <div class="i-class" tabindex="6" onclick="iChangeTabs(this)">风扇灯</div>
     </div>
 </div>
 
@@ -238,31 +461,141 @@
     <div class="gl-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="top-ph"></div>
+
+                <!--每一页必须有下面一行占位-->
+                <div class="placeholder"></div>
+
                 <div class="content">
-                    <div class="goods" onclick="alert('good!');">
-                        <img src="images/light.jpg" class="gp">
-                        <div class="title">0雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
-                        <div class="model">型号：E-NPX9014</div>
-                        <div class="price">
-                            <span class="rmbl">￥</span>
-                            <span class="rmbn">1499</span>
-                            <div class="ac">
-                                <img src="images/cart.png" alt="">
+                    <div class="no-collapse">
+
+                        <!--一个商品-->
+                        <div class="goods" onclick="alert('good!');">
+                            <img src="images/light.jpg" class="gp">
+                            <div class="title">0雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                            <div class="model">型号：E-NPX9014</div>
+                            <div class="price">
+                                <span class="rmbl">￥</span>
+                                <span class="rmbn">1499</span>
+                                <div class="ac">
+                                    <img src="images/cart.png" alt="">
+                                </div>
+                            </div>
+                            <div class="favourite">
+                                <div>
+                                    <img src="images/favourite.png" alt="">
+                                </div>
+                                <div class="fav">收藏</div>
+                                <div>后现代</div>
                             </div>
                         </div>
-                        <div class="favourite">
-                            <div>
-                                <img src="images/favourite.png" alt="">
+                        <!--一个商品-->
+                        <div class="goods" onclick="alert('good!');">
+                            <img src="images/light.jpg" class="gp">
+                            <div class="title">0雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                            <div class="model">型号：E-NPX9014</div>
+                            <div class="price">
+                                <span class="rmbl">￥</span>
+                                <span class="rmbn">1499</span>
+                                <div class="ac">
+                                    <img src="images/cart.png" alt="">
+                                </div>
                             </div>
-                            <div class="fav">收藏</div>
-                            <div>后现代</div>
+                            <div class="favourite">
+                                <div>
+                                    <img src="images/favourite.png" alt="">
+                                </div>
+                                <div class="fav">收藏</div>
+                                <div>后现代</div>
+                            </div>
                         </div>
+                        <div class="goods" onclick="alert('good!');">
+                            <img src="images/light.jpg" class="gp">
+                            <div class="title">0雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                            <div class="model">型号：E-NPX9014</div>
+                            <div class="price">
+                                <span class="rmbl">￥</span>
+                                <span class="rmbn">1499</span>
+                                <div class="ac">
+                                    <img src="images/cart.png" alt="">
+                                </div>
+                            </div>
+                            <div class="favourite">
+                                <div>
+                                    <img src="images/favourite.png" alt="">
+                                </div>
+                                <div class="fav">收藏</div>
+                                <div>后现代</div>
+                            </div>
+                        </div>
+                        <div class="goods" onclick="alert('good!');">
+                            <img src="images/light.jpg" class="gp">
+                            <div class="title">0雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                            <div class="model">型号：E-NPX9014</div>
+                            <div class="price">
+                                <span class="rmbl">￥</span>
+                                <span class="rmbn">1499</span>
+                                <div class="ac">
+                                    <img src="images/cart.png" alt="">
+                                </div>
+                            </div>
+                            <div class="favourite">
+                                <div>
+                                    <img src="images/favourite.png" alt="">
+                                </div>
+                                <div class="fav">收藏</div>
+                                <div>后现代</div>
+                            </div>
+                        </div>
+                        <div class="goods" onclick="alert('good!');">
+                            <img src="images/light.jpg" class="gp">
+                            <div class="title">0雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                            <div class="model">型号：E-NPX9014</div>
+                            <div class="price">
+                                <span class="rmbl">￥</span>
+                                <span class="rmbn">1499</span>
+                                <div class="ac">
+                                    <img src="images/cart.png" alt="">
+                                </div>
+                            </div>
+                            <div class="favourite">
+                                <div>
+                                    <img src="images/favourite.png" alt="">
+                                </div>
+                                <div class="fav">收藏</div>
+                                <div>后现代</div>
+                            </div>
+                        </div>
+                        <div class="goods" onclick="alert('good!');">
+                            <img src="images/light.jpg" class="gp">
+                            <div class="title">0雷士（NVC） 【满1699减550】雷士照明 客厅灯led吸顶灯 卧室灯 长方形灯具 智控轻奢三室两厅一阳台(套餐以赠品形式体现)</div>
+                            <div class="model">型号：E-NPX9014</div>
+                            <div class="price">
+                                <span class="rmbl">￥</span>
+                                <span class="rmbn">1499</span>
+                                <div class="ac">
+                                    <img src="images/cart.png" alt="">
+                                </div>
+                            </div>
+                            <div class="favourite">
+                                <div>
+                                    <img src="images/favourite.png" alt="">
+                                </div>
+                                <div class="fav">收藏</div>
+                                <div>后现代</div>
+                            </div>
+                        </div>
+
                     </div>
+
+
+                    <div class="load-warn">正在获取，请稍候…</div>
+                    <!--每一页必须要有下面一行占位-->
+                    <div class="placeholder"></div>
+
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="top-ph"></div>
+                <div class="placeholder"></div>
                 <div class="content">
                     <div class="goods" onclick="alert('good!');">
                         <img src="images/light.jpg" class="gp">
@@ -286,7 +619,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="top-ph"></div>
+                <div class="placeholder"></div>
                 <div class="content">
                     <div class="goods" onclick="alert('good!');">
                         <img src="images/light.jpg" class="gp">
@@ -310,7 +643,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="top-ph"></div>
+                <div class="placeholder"></div>
                 <div class="content">
                     <div class="goods" onclick="alert('good!');">
                         <img src="images/light.jpg" class="gp">
@@ -334,7 +667,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="top-ph"></div>
+                <div class="placeholder"></div>
                 <div class="content">
                     <div class="goods" onclick="alert('good!');">
                         <img src="images/light.jpg" class="gp">
@@ -358,7 +691,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="top-ph"></div>
+                <div class="placeholder"></div>
                 <div class="content">
                     <div class="goods" onclick="alert('good!');">
                         <img src="images/light.jpg" class="gp">
@@ -382,7 +715,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="top-ph"></div>
+                <div class="placeholder"></div>
                 <div class="content">
                     <div class="goods" onclick="alert('good!');">
                         <img src="images/light.jpg" class="gp">
@@ -408,33 +741,124 @@
         </div>
     </div>
 </div>
+
+<!--下面是footer的结构,方便分离到footer.jsp-->
+
+<div id="f-menu" hidden>
+    <div class="f-m-r">
+        <img src="images/mid0.png" class="i0">
+        <img src="images/mid1.png" class="i1">
+        <img src="images/mid2.png" class="i2">
+        <img src="images/mid3.png" class="i3">
+        <img src="images/mid4.png" class="i4">
+    </div>
+</div>
+
+<div class="footer">
+    <div class="ft fa">
+        <img src="images/01.png" alt="">
+        <div>主页</div>
+    </div>
+    <div class="ft">
+        <img src="images/1.png" alt="">
+        <div>分类查找</div>
+    </div>
+    <div class="ft" onclick="showFooterMid()">
+        <img id="fm" src="images/2.png" alt="">
+        <img id="fma" src="images/21.png" alt="" hidden>
+    </div>
+    <div class="ft">
+        <img src="images/3.png" alt="">
+        <div>购物车</div>
+    </div>
+    <div class="ft">
+        <img src="images/4.png" alt="">
+        <div>我的</div>
+    </div>
+</div>
+<!--上面是footer的结构,方便分离到footer.jsp-->
+
 <script type="text/javascript">
 
     var topMiddle = document.getElementsByClassName('tm')[0];//顶部tab的容器
     var tabs = document.getElementsByClassName('tm_tab');//所有顶部tab
     var searchWindow = document.getElementsByClassName('search-window')[0];//搜索模态框
+    var classWindow = document.getElementsByClassName('class-window')[0];//分类模态框
+    var keywordInput = document.getElementById('keyword');//搜索输入框
 
-    var contentSwiper = new Swiper ('.gl-container', {
-        onSlideChangeEnd: function(swiper){
+    /*
+    * 下面是footer的JavaScript,方便分离到footer.jsp
+    * */
+    var footerMid = document.getElementById('fm');
+    var footerMidActive = document.getElementById('fma');
+    var footerMenu = document.getElementById('f-menu');
+
+    function showFooterMid() {
+        footerMid.hidden = !footerMid.hidden;
+        footerMidActive.hidden = !footerMidActive.hidden;
+        footerMenu.hidden = !footerMenu.hidden;
+    }
+
+    /*
+    * 上面footer的JavaScript,方便分离到footer.jsp
+    * */
+
+    /*
+    * 主Swiper初始化
+    * */
+    var contentSwiper = new Swiper('.gl-container', {
+        onSlideChangeStart: function (swiper) {
             for (var i = 0; i < tabs.length; i++) {
                 tabs[i].className = 'tm_tab';
             }
             tabs[swiper.activeIndex].className += ' tm_tab_active';
             // topMiddle.scrollLeft = 80 * swiper.activeIndex;
-            topMiddle.scrollTo({ top: 0, left: 85 * swiper.activeIndex, behavior: 'smooth' });
+            topMiddle.scrollTo({top: 0, left: 85 * swiper.activeIndex, behavior: 'smooth'});
         }
     });
 
     function changeTabs(object) {
+        /*
+        * 用于修改顶部标签
+        * */
+        var index = object.getAttribute('tabindex');
         for (var i = 0; i < tabs.length; i++) {
             tabs[i].className = 'tm_tab';
         }
-        object.className += ' tm_tab_active';
-        contentSwiper.slideTo(object.getAttribute('index'), 500, false);
+        tabs[index].className += ' tm_tab_active';
+        contentSwiper.slideTo(index, 500, false);
+    }
+
+    function iChangeTabs(object) {
+        /*
+        * 点击内部标签方法
+        * */
+        var index = object.getAttribute('tabindex');
+        showClassWindow();
+        topMiddle.scrollTo({top: 0, left: 85 * index, behavior: 'smooth'});
+        changeTabs(object);
     }
 
     function showSearchWindow() {
+        /*
+        * 出现和隐藏搜索模态框
+        * */
         searchWindow.hidden = !searchWindow.hidden;
+    }
+
+    function showClassWindow() {
+        /*
+        * 出现和隐藏选择分类模态框
+        * */
+        classWindow.hidden = !classWindow.hidden;
+    }
+
+    function searchByKeyword() {
+        /*
+        * 搜索按钮的调用方法
+        * */
+        var keyword = keywordInput.value;
+        alert(keyword);
     }
 
 </script>
