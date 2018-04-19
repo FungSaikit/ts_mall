@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,html {
+    height: 100%;
+    background-color: #e4eaea;
+}
+
+.placeholder {
+    height: 3.2rem;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    display: -webkit-flex;
+    height: 3rem;
+    line-height: 3rem;
+    color: #fff;
+}
+
+.greet {
+    flex-grow: 1;
+}
+
+.setting-btn {
+    width: 7rem;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.p-photo {
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 0.1rem solid white;
+    border-radius: 1.3rem;
+    margin: 0.35rem;
+}
+
+.setting-btn div {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    text-align: center;
+}
+
+.wallet-swiper {
+    width: 18rem;
+    height: 5rem;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.rmb {
+    font-size: 1.8rem;
+}
+
+.st {
+    height: 50%;
+}
+
+.sb {
+    height: 50%;
+}
+
+.wt {
+    line-height: 2.5rem;
+    border-bottom: 1px solid #fff;
+}
+
+.sb img {
+    width: 1.4rem;
+    height: 1.4rem;
+    vertical-align: middle;
+}
+.top-info {
+    width: 96%;
+    margin: 2%;
+    display: flex;
+    display: -webkit-flex;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-top: 1px solid #dec8f6;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+.ib {
+    height: 90%;
+    width: 30%;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    margin-top: 0.3rem;
+    line-height: 1rem;
+}
+
+.ib:nth-child(2) {
+    border-left: 1px solid #dec8f6;
+    border-right: 1px solid #dec8f6;
+}
+
+.i2m {
+    height: 5rem;
+    background-color: #fff;
+    margin: 0 0.5rem 0 0.5rem;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    display: -webkit-flex;
+    color: dimgray;
+}
+
+.i2mb {
+    width: 50%;
+    border-right: 1px solid lightgray;
+    position: relative;
+}
+
+.i2m0 {
+    height: 3rem;
+    width: 6rem;
+    line-height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    font-size: 1rem;
+}
+
+.i2m1 {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    left: 6rem;
+    top: 0.7rem;
+}
+
+.i2m2 {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 1rem;
+    font-size: 0.7rem;
+}
+
+.order {
+    margin-top: 0.5rem;
+    border-top: 1px solid lightgray;
+    width: 100%;
+    height: 8rem;
+    background-color: #fff;
+}
+
+.ot {
+    height: 1rem;
+    line-height: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+}
+
+.ot.otp {
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.ot.otp .oti {
+    margin-top: 1rem;
+}
+
+.otl {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    border-left: 2px solid #a577f1;
+    white-space: nowrap;
+}
+
+.otr {
+    color: gray;
+}
+
+.oti {
+    height: 1rem;
+    width: 1rem;
+}
+
+.of {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.ofi {
+    width: 25%;
+    height: 5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: dimgray;
+    position: relative;
+}
+
+.ofi img {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0.7rem auto;
+}
+
+.ofin {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    background-color: #f38200;
+    min-width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    color: #fff;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.1rem;
+}
+
+.ad-swiper {
+    margin-top: 0.5rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 5rem;
+}
+
+.ad-swiper img {
+    width: 100%;
+}
+
+.order.other {
+    height: auto;
+}
+
+.otl.sp {
+    border: 0;
+    color: #696969;
+}
+
+.ost {
+    font-size: 0.8rem;
+    color: dimgray;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.spi {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.wallet-swiper .swiper-button-prev,.swiper-button-next {
+    width: 0.75rem;
+    height: 1rem;
+    background-size: 0.75rem 1rem;
+}
+
+.setting-window {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: #e4eaea;
+    z-index: 100;
+}
+
+.l-photo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.round-photo {
+    border-radius: 3rem;
+}

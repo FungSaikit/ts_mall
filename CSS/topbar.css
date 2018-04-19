@@ -1,0 +1,53 @@
+/*
+topbar结构
+
+<div class="topbar">
+    <div class="tb-bt" onclick="hideSettingWindow()">
+        <img src="images/back-white.png" alt="">//topbar左按钮图片
+    </div>
+    <div class="tb-title">标题</div>
+    <div class="tb-bt">
+        <img src="images/back-white.png" alt="">//topbar右按钮图片
+    </div>
+</div>
+
+*/
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    background: -webkit-linear-gradient(left, #e171bb, #a878f2);
+    background: -o-linear-gradient(right, #e171bb, #a878f2);
+    background: -moz-linear-gradient(right, #e171bb, #a878f2);
+    background: linear-gradient(to right, #e171bb , #a878f2);
+    display: flex;
+    display: -webkit-flex;
+    color: #ffffff;
+}
+
+.tb-bt {
+    width: 3rem;
+}
+
+.tb-bt img{
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0.9rem;
+}
+
+.tb-title {
+    font-size: 1.2rem;
+    width: 60%;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    text-align: center;
+}
+
+.tb-placeholder {
+    width: 100%;
+    height: 3rem;
+}

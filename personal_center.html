@@ -7,272 +7,16 @@
     <title>灯客网</title>
     <script type="text/javascript" src="JavaScript/swiper-3.4.2.min.js"></script>
     <link rel="stylesheet" href="CSS/swiper-3.4.2.min.css">
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body,html {
-            height: 100%;
-            background-color: #e4eaea;
-        }
-
-        .placeholder {
-            height: 3.2rem;
-            width: 100%;
-        }
-
-        .content {
-            width: 100%;
-            background: url("images/personal_center/pc_bg.jpg") no-repeat top center;
-            -webkit-background-size: 100% 14rem;
-            background-size: 100% 14rem;
-        }
-
-        .top {
-            display: flex;
-            display: -webkit-flex;
-            height: 3rem;
-            line-height: 3rem;
-            color: #fff;
-        }
-
-        .greet {
-            flex-grow: 1;
-        }
-
-        .setting-btn {
-            width: 7rem;
-            display: flex;
-            display: -webkit-flex;
-        }
-
-        .setting-btn img {
-            width: 2.1rem;
-            height: 2.1rem;
-            border: 0.1rem solid white;
-            border-radius: 1.3rem;
-            margin: 0.35rem;
-        }
-
-        .setting-btn div {
-            flex-grow: 1;
-            -webkit-flex-grow: 1;
-            text-align: center;
-        }
-
-        .wallet-swiper {
-            width: 18rem;
-            height: 5rem;
-            position: relative;
-            overflow: hidden;
-            margin: auto;
-            text-align: center;
-            color: #fff;
-        }
-
-        .rmb {
-            font-size: 1.8rem;
-        }
-
-        .st {
-            height: 50%;
-        }
-
-        .sb {
-            height: 50%;
-        }
-
-        .wt {
-            line-height: 2.5rem;
-            border-bottom: 1px solid #fff;
-        }
-
-        .sb img {
-            width: 1.4rem;
-            height: 1.4rem;
-            vertical-align: middle;
-        }
-        .top-info {
-            width: 96%;
-            margin: 2%;
-            display: flex;
-            display: -webkit-flex;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            border-top: 1px solid #dec8f6;
-            text-align: center;
-            color: #ffffff;
-            font-size: 0.8rem;
-        }
-
-        .ib {
-            height: 90%;
-            width: 30%;
-            flex-grow: 1;
-            -webkit-flex-grow: 1;
-            margin-top: 0.3rem;
-            line-height: 1rem;
-        }
-
-        .ib:nth-child(2) {
-            border-left: 1px solid #dec8f6;
-            border-right: 1px solid #dec8f6;
-        }
-
-        .i2m {
-            height: 6rem;
-            background-color: #fff;
-            margin: 0 0.5rem 0 0.5rem;
-            border-top: 1px solid lightgray;
-            border-left: 1px solid lightgray;
-            border-bottom: 1px solid lightgray;
-            display: flex;
-            display: -webkit-flex;
-            color: dimgray;
-        }
-
-        .i2mb {
-            width: 50%;
-            border-right: 1px solid lightgray;
-            position: relative;
-        }
-
-        .i2m0 {
-            height: 3rem;
-            width: 6rem;
-            line-height: 3rem;
-            position: absolute;
-            top: 0.5rem;
-            left: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .i2m1 {
-            height: 2rem;
-            width: 2rem;
-            position: absolute;
-            left: 7rem;
-            top: 1rem;
-        }
-
-        .i2m2 {
-            position: absolute;
-            left: 0.5rem;
-            bottom: 1rem;
-            font-size: 0.8rem;
-        }
-
-        .order {
-            margin-top: 0.5rem;
-            border-top: 1px solid lightgray;
-            width: 100%;
-            height: 8rem;
-            background-color: #fff;
-        }
-
-        .ot {
-            height: 1rem;
-            line-height: 1rem;
-            padding: 1rem;
-            border-bottom: 1px solid lightgray;
-            display: flex;
-        }
-
-        .otl {
-            flex-grow: 1;
-            -webkit-flex-grow: 1;
-            border-left: 2px solid #a577f1;
-        }
-
-        .otr {
-            color: gray;
-        }
-
-        .oti {
-            height: 1rem;
-            width: 1rem;
-        }
-
-        .of {
-            display: flex;
-            display: -webkit-flex;
-        }
-
-        .ofi {
-            width: 25%;
-            height: 5rem;
-            text-align: center;
-            font-size: 0.8rem;
-            color: dimgray;
-            position: relative;
-        }
-
-        .ofi img {
-            display: block;
-            width: 1.8rem;
-            height: 1.8rem;
-            margin: 0.7rem auto;
-        }
-        
-        .ofin {
-            position: absolute;
-            right: 1rem;
-            top: 0.5rem;
-            background-color: #f38200;
-            min-width: 1rem;
-            height: 1rem;
-            line-height: 1rem;
-            color: #fff;
-            border-radius: 1rem;
-            font-size: 0.8rem;
-            text-align: center;
-            padding: 0.1rem;
-        }
-
-        .ad-swiper {
-            margin-top: 0.5rem;
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            min-height: 5rem;
-        }
-
-        .ad-swiper img {
-            width: 100%;
-        }
-
-        .order.other {
-            height: auto;
-        }
-
-        .otl.sp {
-            border: 0;
-            color: #696969;
-        }
-
-        .spi {
-            width: 1.2rem;
-            height: 1.2rem;
-        }
-
-        .wallet-swiper .swiper-button-prev,.swiper-button-next {
-            height: 1.5rem;
-            width: 1rem;
-            background-size: 1rem 1.5rem;
-        }
-
-    </style>
+    <link rel="stylesheet" href="CSS/topbar.css">
+    <link rel="stylesheet" href="CSS/personal_center.css">
 </head>
 <body>
 
-<div class="content">
+<div class="content" style="background: url('images/personal_center/pc_bg.jpg') no-repeat top center; -webkit-background-size: 100% 14rem; background-size: 100% 14rem; ">
     <div class="top">
         <div class="greet">&nbsp&nbsp您好，FungSaikit。</div>
-        <div class="setting-btn">
-            <img src="images/personal_center/icon.jpg" alt="">
+        <div class="setting-btn" onclick="showSettingWindow()">
+            <img class="p-photo" src="images/personal_center/icon.jpg" alt="">
             <div>设置</div>
         </div>
     </div>
@@ -437,12 +181,79 @@
             <img src="images/personal_center/go.png" class="oti">
         </div>
     </div>
-
+    <div class="setting-window" hidden>
+        <div class="topbar">
+            <div class="tb-bt" onclick="showSettingWindow()">
+                <img src="images/back-white.png" alt="">
+            </div>
+            <div class="tb-title">信息修改</div>
+            <div class="tb-bt"></div>
+        </div>
+        <div class="tb-placeholder"></div>
+        <div class="order other">
+            <div class="ot otp">
+                <div class="otl sp">会员头像</div>
+                <div class="ost">
+                    <img class="l-photo round-photo" src="images/personal_center/icon.jpg" alt="">
+                </div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+            <div class="ot" onclick="changeInfo(this)">
+                <div class="otl sp">会员昵称</div>
+                <div class="ost">FungSaikit</div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+            <div class="ot" onclick="changeInfo(this)">
+                <div class="otl sp">性别</div>
+                <div class="ost">男</div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+        </div>
+        <div class="order other">
+            <div class="ot" onclick="changeInfo(this)">
+                <div class="otl sp">店铺名称</div>
+                <div class="ost">灯饰商城</div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+            <div class="ot" onclick="changeInfo(this)">
+                <div class="otl sp">联系电话</div>
+                <div class="ost">13313313313</div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+            <div class="ot" onclick="changeInfo(this)">
+                <div class="otl sp">QQ号</div>
+                <div class="ost">675703302</div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+            <div class="ot" onclick="changeInfo(this)">
+                <div class="otl sp">店铺地址</div>
+                <div class="ost">广东省 广州市 天河区 五山路483号</div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+            <div class="ot otp">
+                <div class="otl sp">店铺二维码</div>
+                <div class="ost">
+                    <img class="l-photo" src="images/personal_center/qrcode.jpg" alt="">
+                </div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+            <div class="ot otp">
+                <div class="otl sp">推广二维码</div>
+                <div class="ost">
+                    <img class="l-photo" src="images/personal_center/qrcode.jpg" alt="">
+                </div>
+                <img src="images/personal_center/go.png" class="oti">
+            </div>
+        </div>
+    </div>
     <!--最下方给底部导航栏留出空位-->
     <div class="placeholder"></div>
 </div>
 
 <script type="text/javascript">
+
+    var settingWindow = document.getElementsByClassName('setting-window')[0];
+    var body = document.getElementsByTagName('body')[0];
 
     var walletSwiper = new Swiper('.wallet-swiper', {
         loop: true,
@@ -455,6 +266,33 @@
         autoplay: 3000,
         pagination: '.swiper-pagination'
     })
+
+    function showSettingWindow() {
+        /*
+        * 显示或隐藏信息修改模态窗
+        * */
+        if (settingWindow.hidden) {
+            body.style.position = 'fixed';
+            body.style.overflow = 'hidden';
+            body.style.height = '100%';
+            settingWindow.hidden = false;
+        } else {
+            body.style.position = '';
+            body.style.overflow = '';
+            body.style.height = '';
+            settingWindow.hidden = true;
+        }
+    }
+
+    function changeInfo(object) {
+        /*
+        * 使用prompt修改信息
+        * */
+        var title = object.getElementsByClassName('otl')[0];
+        var oldInfo = object.getElementsByClassName('ost')[0];
+        var newInfo = prompt('请输入新的' + title.innerText + '：', oldInfo.innerText);
+        oldInfo.innerText = newInfo;
+    }
 
 </script>
 
